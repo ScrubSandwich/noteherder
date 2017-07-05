@@ -17,7 +17,6 @@ class NoteForm extends Component {
               type="text"
               name="title"
               placeholder="Title your note"
-              value="Kohlrabi welsh"
             />
           </p>
           
