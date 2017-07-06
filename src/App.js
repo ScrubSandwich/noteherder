@@ -7,8 +7,6 @@ class App extends Component {
   constructor() {
     super()
 
-    this.setCurrentNote = this.setCurrentNote.bind(this)
-
     this.state = {
       notes: {
         'note-1': {
@@ -30,7 +28,7 @@ class App extends Component {
     }
   }
 
-  setCurrentNote(note) {
+  setCurrentNote = (note) => {
     this.setState({ currentNote: note })
   }
 
