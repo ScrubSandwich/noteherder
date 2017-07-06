@@ -8,18 +8,7 @@ class App extends Component {
     super()
 
     this.state = {
-      notes: {
-        'note-1': {
-          id: 'note-1',
-          title: 'My fancy note from App',
-          body: 'This note is so fancy!',
-        },
-        'note-2': {
-          id: 'note-2',
-          title: 'Another one from App',
-          body: 'Also very fancy',
-        },
-      },
+      notes: {},
       currentNote: this.blankNote(),
     }
   }
@@ -40,10 +29,22 @@ class App extends Component {
     this.setCurrentNote(this.blankNote())
   }
 
+  saveNote = (note) => {
+    const notes = {...this.state.notes}
+    if (!note.id) {
+      note.id = Date.now()
+    }
+    notes[note.id] = note
+
+    this.setState({ notes })
+    this.setCurrentNote(note)
+  }
+
   render() {
     const actions = {
       setCurrentNote: this.setCurrentNote,
       resetCurrentNote: this.resetCurrentNote,
+      saveNote: this.saveNote,
     }
 
     const noteData = {
