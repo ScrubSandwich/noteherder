@@ -22,7 +22,7 @@ Run `yarn install` (or `npm install`) and `yarn start` (or `npm start`).
 
 * Make the "+" button in the sidebar clear out the form so a new note can be added.
 
-## Day 7 Homework
+## Day 8 Homework
 
 * Add another authentication provider (like GitHub).
 
