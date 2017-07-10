@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Note = ({ note, setCurrentNote }) => {
+const Note = ({ note, setCurrentNoteId }) => {
   const handleClick = () => {
-    setCurrentNote(note)
+    setCurrentNoteId(note.id)
   }
 
   return (
