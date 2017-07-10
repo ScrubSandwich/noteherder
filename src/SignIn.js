@@ -1,10 +1,13 @@
 import React from 'react'
 
 import './SignIn.css'
+import { auth, googleProvider } from './base'
 
 const SignIn = ({ handleAuth }) => {
   const authenticate = () => {
-    handleAuth()
+    auth
+      .signInWithPopup(googleProvider)
+      .then(handleAuth)
   }
 
   return (
