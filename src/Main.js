@@ -17,7 +17,6 @@ const Main = (props) => {
   return (
     <div className="Main">
       <Sidebar
-        resetCurrentNote={props.resetCurrentNote}
         signOut={props.signOut}
       />
       <NoteList
