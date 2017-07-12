@@ -40,6 +40,19 @@ class NoteForm extends Component {
   handleChanges = (ev) => {
     const note = {...this.state.note}
     note[ev.target.name] = ev.target.value
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+
+    var yyyy = today.getFullYear();
+    if(dd<10){
+        dd='0'+dd;
+    } 
+    if(mm<10){
+        mm='0'+mm;
+    } 
+    var today = mm+'/'+dd+'/'+yyyy;
+    note.time = today
 
     this.setState(
       { note },
@@ -50,6 +63,20 @@ class NoteForm extends Component {
   handleEditorChanges = (editorValue) => {
     const note = {...this.state.note}
     note.body = editorValue.toString('html')
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+
+    var yyyy = today.getFullYear();
+    if(dd<10){
+        dd='0'+dd;
+    } 
+    if(mm<10){
+        mm='0'+mm;
+    } 
+    var today = mm+'/'+dd+'/'+yyyy;
+    note.time = today
+
     this.setState(
       { note, editorValue },
       () => this.props.saveNote(note)
