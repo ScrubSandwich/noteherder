@@ -32,6 +32,14 @@ Run `yarn deploy` (or `npm run deploy`) to deploy the app to Firebase.
 
 * Add another authentication provider (like GitHub).
 
+## Day 10 Homework
+
+* Add an `updatedAt` field to notes (updating its value every time you save the note).
+
+### Super Mega Bonus Credit
+
+* Sort the notes in the list with the most recently updated at the top.
+
 --
 
 Quill graphic by Icon Solid from the [Noun Project](https://thenounproject.com/).
